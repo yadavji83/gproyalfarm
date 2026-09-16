@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23073b2a%22/><text x=%2250%22 y=%2265%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%22%23d7ad5a%22 font-family=%22Georgia%22>GP</text></svg>">
-    <link rel="stylesheet" href="assets/css/styles.css?v=1.2">
+    <link rel="stylesheet" href="assets/css/styles.css?v=1.4">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,11 +40,19 @@
                 <span></span><span></span><span></span>
             </button>
             <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+                <div class="mobile-menu-intro">
+                    <span>Your private escape</span>
+                    <p>Stay, celebrate and unwind in complete privacy.</p>
+                </div>
                 <a href="#experience">Experience</a>
                 <a href="#amenities">Amenities</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#location">Location</a>
                 <a class="nav-cta" href="#book">Check availability</a>
+                <div class="mobile-menu-contact">
+                    <a href="https://wa.me/919718457100?text=Hi%20GP%20Royal%20Farm%2C%20I%27d%20like%20to%20check%20availability." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.45L3 20l1.08-4.62A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.2 7.8c.35 3.5 2.5 5.65 6 6l1.1-1.2c.2-.2.48-.27.75-.18l2.05.68"/></svg><span><small>WhatsApp</small><strong>Chat with us</strong></span></a>
+                    <a href="tel:+919718457100"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92Z"/></svg><span><small>Call now</small><strong>97184 57100</strong></span></a>
+                </div>
             </nav>
         </div>
     </header>
@@ -76,18 +84,19 @@
                 </div>
                 <div class="hero-slider-controls" aria-label="Featured property photos">
                     <div class="hero-slider-dots">
-                        <button class="is-active" type="button" data-hero-slide="0" aria-label="Show pool photo" aria-current="true"><span></span></button>
-                        <button type="button" data-hero-slide="1" aria-label="Show garden photo"><span></span></button>
-                        <button type="button" data-hero-slide="2" aria-label="Show bedroom photo"><span></span></button>
-                        <button type="button" data-hero-slide="3" aria-label="Show hall photo"><span></span></button>
-                        <button type="button" data-hero-slide="4" aria-label="Show balcony photo"><span></span></button>
-                        <button type="button" data-hero-slide="5" aria-label="Show kitchen photo"><span></span></button>
+                        <button class="is-active" type="button" data-hero-slide="0" aria-label="Show villa and lawn photo" aria-current="true"><span></span></button>
+                        <button type="button" data-hero-slide="1" aria-label="Show pool photo"><span></span></button>
+                        <button type="button" data-hero-slide="2" aria-label="Show garden photo"><span></span></button>
+                        <button type="button" data-hero-slide="3" aria-label="Show bedroom photo"><span></span></button>
+                        <button type="button" data-hero-slide="4" aria-label="Show hall photo"><span></span></button>
+                        <button type="button" data-hero-slide="5" aria-label="Show balcony photo"><span></span></button>
+                        <button type="button" data-hero-slide="6" aria-label="Show kitchen photo"><span></span></button>
                     </div>
                     <button class="hero-slider-toggle" type="button" aria-label="Pause slideshow">
                         <span class="pause-icon" aria-hidden="true"></span>
                         <span class="hero-slider-toggle-text">Pause</span>
                     </button>
-                    <span class="sr-only" data-hero-status aria-live="polite">Pool photo, 1 of 6</span>
+                    <span class="sr-only" data-hero-status aria-live="polite">Villa and lawn photo, 1 of 7</span>
                 </div>
             </div>
             <a class="scroll-cue" href="#experience" aria-label="Explore the property"><span></span>Explore</a>
@@ -260,11 +269,23 @@
             </div>
         </section>
 
-        <section class="rate-strip" aria-label="Starting price">
-            <div class="container rate-inner">
-                <div><span>Small-group stays from</span><strong>₹1,490 <small>/ person</small></strong></div>
-                <p>Planning a bigger gathering? Ask us about special group pricing.</p>
-                <a href="#book">Check your date <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <section class="group-chat-cta" aria-labelledby="group-chat-title">
+            <div class="container">
+                <div class="group-chat-card reveal">
+                    <div class="group-chat-copy">
+                        <span class="group-chat-kicker">Groups · Celebrations · Events</span>
+                        <h2 id="group-chat-title">Planning a bigger gathering?</h2>
+                        <p>Ask us about special group pricing.</p>
+                    </div>
+                    <div class="group-chat-action">
+                        <a class="group-chat-button" href="https://wa.me/919718457100?text=Hi%20GP%20Royal%20Farm%2C%20I%27m%20planning%20a%20bigger%20gathering.%20Please%20share%20special%20group%20pricing." target="_blank" rel="noopener" aria-label="Chat on WhatsApp about special group pricing">
+                            <span class="group-chat-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.45L3 20l1.08-4.62A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.2 7.8c.35 3.5 2.5 5.65 6 6l1.1-1.2c.2-.2.48-.27.75-.18l2.05.68"/></svg></span>
+                            <span><strong>Chat on WhatsApp</strong><small>Get dates &amp; group pricing</small></span>
+                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                        </a>
+                        <span class="group-chat-note">Quick response · No booking obligation</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -378,6 +399,6 @@
         <button class="lightbox-next" type="button" aria-label="Next photo">›</button>
     </dialog>
 
-    <script src="assets/js/app.js?v=1.2" defer></script>
+    <script src="assets/js/app.js?v=1.4" defer></script>
 </body>
 </html>

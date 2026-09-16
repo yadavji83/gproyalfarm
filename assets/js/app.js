@@ -31,12 +31,11 @@
     const heroToggleText = document.querySelector('.hero-slider-toggle-text');
     const heroStatus = document.querySelector('[data-hero-status]');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const slideNames = ['Pool', 'Garden', 'Bedroom', 'Hall', 'Balcony', 'Kitchen'];
+    const slideNames = ['Villa and lawn', 'Pool', 'Garden', 'Bedroom', 'Hall', 'Balcony', 'Kitchen'];
     let heroIndex = 0;
     let heroTimer = null;
     let userPaused = reducedMotion.matches;
     let heroInView = true;
-    let heroHovered = false;
     let heroFocused = false;
 
     const setHeroSlide = index => {
@@ -59,8 +58,8 @@
 
     const refreshHeroTimer = () => {
         stopHeroTimer();
-        if (!userPaused && heroInView && !heroHovered && !heroFocused && !document.hidden && heroSlides.length > 1) {
-            heroTimer = window.setInterval(() => setHeroSlide(heroIndex + 1), 5200);
+        if (!userPaused && heroInView && !heroFocused && !document.hidden && heroSlides.length > 1) {
+            heroTimer = window.setInterval(() => setHeroSlide(heroIndex + 1), 3000);
         }
     };
 
@@ -81,8 +80,6 @@
         refreshHeroTimer();
     });
 
-    hero?.addEventListener('mouseenter', () => { heroHovered = true; refreshHeroTimer(); });
-    hero?.addEventListener('mouseleave', () => { heroHovered = false; refreshHeroTimer(); });
     hero?.addEventListener('focusin', () => { heroFocused = true; refreshHeroTimer(); });
     hero?.addEventListener('focusout', () => {
         window.setTimeout(() => {
