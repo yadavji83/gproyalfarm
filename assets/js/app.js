@@ -139,7 +139,7 @@
             `Occasion: ${data.get('occasion')}`,
             data.get('message') ? `Message: ${data.get('message')}` : '',
         ].filter(Boolean).join('\n');
-        window.open(`https://wa.me/918700022385?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+        window.open(`https://wa.me/919718457100?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
     });
 
     const galleryTrack = document.querySelector('[data-gallery-track]');
