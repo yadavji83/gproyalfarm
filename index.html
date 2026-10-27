@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23073b2a%22/><text x=%2250%22 y=%2265%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%22%23d7ad5a%22 font-family=%22Georgia%22>GP</text></svg>">
-    <link rel="stylesheet" href="assets/css/styles.css?v=1.4">
+    <link rel="stylesheet" href="assets/css/styles.css?v=1.5">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -193,15 +193,15 @@
             </div>
 
             <div class="container experience-collage reveal">
-                <figure class="collage-main">
+                <figure class="collage-main gallery-trigger" role="button" tabindex="0" data-gallery-src="assets/images/1.webp" aria-label="Open full gallery at poolside photo">
                     <img src="assets/images/1.webp" alt="Private pool beside the villa" width="1360" height="907" loading="lazy">
                     <figcaption><span>01</span> Poolside privacy</figcaption>
                 </figure>
-                <figure class="collage-top">
+                <figure class="collage-top gallery-trigger" role="button" tabindex="0" data-gallery-src="assets/images/18.webp" aria-label="Open full gallery at living hall photo">
                     <img src="assets/images/18.webp" alt="Large air-conditioned living hall" width="1360" height="907" loading="lazy">
                     <figcaption><span>02</span> Room to gather</figcaption>
                 </figure>
-                <figure class="collage-bottom">
+                <figure class="collage-bottom gallery-trigger" role="button" tabindex="0" data-gallery-src="assets/images/12.webp" aria-label="Open full gallery at lawn photo">
                     <img src="assets/images/12.webp" alt="Landscaped event lawn" width="1360" height="907" loading="lazy">
                     <figcaption><span>03</span> Lawns made for memories</figcaption>
                 </figure>
@@ -392,13 +392,32 @@
         <a href="#book"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg> Check availability</a>
     </div>
 
-    <dialog class="lightbox" id="lightbox" aria-label="Property photo viewer">
-        <button class="lightbox-close" type="button" aria-label="Close photo viewer">×</button>
-        <button class="lightbox-prev" type="button" aria-label="Previous photo">‹</button>
-        <figure><img src="" alt=""><figcaption></figcaption></figure>
-        <button class="lightbox-next" type="button" aria-label="Next photo">›</button>
+    <dialog class="lightbox" id="lightbox" aria-label="Full-screen GP Royal Farm photo gallery">
+        <header class="lightbox-header">
+            <div class="lightbox-title">
+                <strong>GP Royal Farm</strong>
+                <span class="lightbox-counter" aria-live="polite">1 / 1</span>
+            </div>
+            <div class="lightbox-tools" aria-label="Image zoom controls">
+                <button class="lightbox-zoom-out" type="button" aria-label="Zoom out">−</button>
+                <button class="lightbox-zoom-level" type="button" aria-label="Reset zoom">100%</button>
+                <button class="lightbox-zoom-in" type="button" aria-label="Zoom in">+</button>
+                <button class="lightbox-close" type="button" aria-label="Close photo gallery">×</button>
+            </div>
+        </header>
+        <div class="lightbox-stage">
+            <button class="lightbox-prev" type="button" aria-label="Previous photo">‹</button>
+            <div class="lightbox-canvas">
+                <img src="" alt="" draggable="false">
+            </div>
+            <button class="lightbox-next" type="button" aria-label="Next photo">›</button>
+        </div>
+        <footer class="lightbox-footer">
+            <p class="lightbox-caption"></p>
+            <p class="lightbox-help"><span class="mobile-hint">Swipe to browse · Pinch or double-tap to zoom</span><span class="desktop-hint">Use arrows to browse · Scroll to zoom · Drag to pan</span></p>
+        </footer>
     </dialog>
 
-    <script src="assets/js/app.js?v=1.4" defer></script>
+    <script src="assets/js/app.js?v=1.5" defer></script>
 </body>
 </html>
