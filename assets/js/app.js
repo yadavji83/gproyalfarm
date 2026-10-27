@@ -230,7 +230,7 @@
         if (galleryTrack.hasPointerCapture(event.pointerId)) galleryTrack.releasePointerCapture(event.pointerId);
         if (galleryMoved) {
             suppressGalleryClick = true;
-            window.setTimeout(() => { suppressGalleryClick = false; }, 0);
+            window.setTimeout(() => { suppressGalleryClick = false; }, 180);
         }
         refreshGalleryTimer();
     };
@@ -371,13 +371,18 @@
         document.body.classList.add('lightbox-open');
     };
 
-    galleryButtons.forEach(button => button.addEventListener('click', event => {
+    galleryButtons.forEach(button => button.setAttribute('aria-haspopup', 'dialog'));
+    collageTriggers.forEach(trigger => trigger.setAttribute('aria-haspopup', 'dialog'));
+
+    galleryTrack?.addEventListener('click', event => {
+        const button = event.target.closest('.gallery-item');
+        if (!button || !galleryTrack.contains(button)) return;
         if (suppressGalleryClick) {
             event.preventDefault();
             return;
         }
         openGallery(button.querySelector('img')?.getAttribute('src'));
-    }));
+    });
 
     collageTriggers.forEach(trigger => {
         const open = () => openGallery(trigger.dataset.gallerySrc || trigger.querySelector('img')?.getAttribute('src'));
